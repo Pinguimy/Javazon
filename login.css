@@ -1,0 +1,119 @@
+body {
+  background-color: #d6cfcf; /* Cor de fundo neutra para destacar o formulário de login */
+}
+
+header {
+  background-color: #131921;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 1.05); /* Sombra para profundidade header */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  position: sticky; /* Fixa o header no topo durante a rolagem */
+  top: 0;
+  z-index: 1000;
+}
+
+.login-pagina {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+  padding: 20px;
+}
+
+.form-container {
+  background-color: white;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+}
+
+.form-tabs {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
+
+.botao-aba {
+  flex-grow: 1;
+  padding: 10px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #999;
+  border-bottom: 2px solid transparent;
+  transition: all 0.3s;
+}
+
+.botao-aba.ativa {
+  color: #ff741f;
+  border-bottom: 2px solid #ff741f;
+}
+
+.formulario-autenticacao {
+  display: none;
+  padding-top: 10px;
+}
+
+.formulario-autenticacao.ativa {
+  display: block;
+}
+
+.formulario-autenticacao h2 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.formulario-autenticacao input[type="email"],
+.formulario-autenticacao input[type="password"],
+.formulario-autenticacao input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box; /* Garante que padding e border não aumentem a largura total */
+  font-size: 1rem;
+  margin-bottom: 12px; /* espaço entre os campos */
+}
+
+.btn-enviar {
+  width: 100%;
+  background-color: #ff6600;
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-top: 25px;
+  transition: background-color 0.2s;
+}
+
+.btn-enviar:hover {
+  background-color: #e65c00;
+}
+
+.troca-form {
+  text-align: center;
+  margin-top: 15px;
+}
+
+footer {
+  text-align: center;
+  padding: 2rem 1rem;
+  background: #131921;
+  color: #ecf0f1;
+  margin-top: 3rem;
+}
+
+.contato {
+    text-decoration: none;
+    color: #ff741f;
+}

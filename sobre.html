@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre | Javazon</title>
+    <link rel="stylesheet" href="pagina.css">
+    <link rel="icon" type="logo" href="loogo.png"/>
+</head>
+<body>
+    <header> 
+         <a href="index.html">
+        <img class= "logo" src="image.png" alt="Java zon Logo">
+        </a>
+        <div class="barra-pesquisa">
+            <div class="categoria-dropdown">
+                <select id="category-select">
+                    <option value="">Todos</option>
+                    <option value="">Placa Mãe</option>
+                    <option value="">Processador</option>
+                    <option value="">Memória RAM</option>
+                </select>
+            </div>
+            <input type="text" id="input-pesquisa" placeholder="Pesquisar Java|zon.com.br">
+            <button id="btn-pesquisa">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M15.5 14h-.79l-.28-.27A6.47 6.47 0 0 0 16 9.5A6.5 6.5 0 1 0 9.5 16a6.47 6.47 0 0 0 3.73-1.28l.27.28v.79l5 4.99L20.49 19zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5S14 7.01 14 9.5S11.99 14 9.5 14"/></svg>
+            </button>
+        </div>
+
+        <nav>
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="produto.html">Ofertas</a></li>
+                <li><a href="sobre.html">Sobre Nós</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+        </nav>
+        
+        <div class="acoes-topo">
+            <a href="#" class="icone-acao" id="btn-cart" role="button" aria-label="Abrir carrinho de compras">
+                <span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M21 4H2v2h2.3l3.28 9a3 3 0 0 0 2.82 2H19v-2h-8.6a1 1 0 0 1-.94-.66L9 13h9.28a2 2 0 0 0 1.92-1.45L22 5.27A1 1 0 0 0 21.27 4A.8.8 0 0 0 21 4m-2.75 7h-10L6.43 6h13.24z"/><circle cx="10.5" cy="19.5" r="1.5" fill="currentColor"/><circle cx="16.5" cy="19.5" r="1.5" fill="currentColor"/></svg></span>
+            </a>
+            <a href="login.html" class="icone-acao" id="btn-login" role="button" aria-label="Fazer login ou acessar perfil">
+                <span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2A10 10 0 0 0 2 12a10 10 0 0 0 10 10a10 10 0 0 0 10-10A10 10 0 0 0 12 2m0 3a3 3 0 0 1 3 3a3 3 0 0 1-3 3a3 3 0 0 1-3-3a3 3 0 0 1 3-3m0 14.2c-2.5 0-4.71-1.26-6-3.19c.01-1.42 3.33-2.58 6-2.58s5.99 1.16 6 2.58c-1.29 1.93-3.5 3.19-6 3.19"/></svg></span>
+            </a>
+        </div>
+    </header>
+
+    <main class="sobre-pagina">
+        <h1>Sobre a Java|zon</h1>
+        <p class="subtitulo">Sua principal fonte de hardware e tecnologia de <strong>ponta no Nordeste!</strong></p>
+
+        <section class="historia">
+            <h2>Nossa História</h2>
+            <p>
+                A <strong>Java|zon</strong> nasceu em 2025 com a missão de preencher uma lacuna no mercado de e-commerce de tecnologia no Brasil. Inspirados pela paixão por programação e hardware, decidimos criar uma plataforma que não apenas vendesse produtos, mas que fosse um ponto de encontro para entusiastas, profissionais e gamers.
+            </p>
+            <p>
+                Desde o início, nosso foco tem sido a curadoria de produtos de alta qualidade, garantindo que você encontre as melhores placas-mãe, processadores e memórias RAM para montar ou atualizar a sua máquina dos sonhos.
+            </p>
+        </section>
+
+        <section class="missao-visao-valores">
+            <h2>Missão, Visão e Valores</h2>
+            <div class="mvv-container">
+                <article class="mvv-item">
+                    <h3>Missão</h3>
+                    <p>Oferecer o melhor hardware e componentes de tecnologia com preços competitivos e um serviço de excelência, capacitando nossos clientes a construir e inovar.</p>
+                </article>
+                <article class="mvv-item">
+                    <h3>Visão</h3>
+                    <p>Ser a loja de referência em hardware no Brasil, reconhecida pela qualidade dos produtos, agilidade na entrega e a mais completa assistência técnica.</p>
+                </article>
+                <article class="mvv-item">
+                    <h3>Valores</h3>
+                    <ul>
+                        <li><i class="icon-check"></i> Paixão por Tecnologia: Somos movidos pela inovação.</li>
+                        <li><i class="icon-check"></i> Transparência: Preços justos e comunicação clara.</li>
+                        <li><i class="icon-check"></i> Comprometimento: Entrega rápida e suporte dedicado.</li>
+                    </ul>
+                </article>
+            </div>
+        </section>
+
+        <section class="diferenciais">
+            <h2>Por que escolher a Java|zon?</h2>
+            <p>
+                Além da nossa vasta seleção de produtos, garantimos: <strong> Entrega Rápida </strong> em todo o Nordeste, <strong> Garantia Estendida </strong>
+                 em componentes selecionados e um <strong> Suporte Técnico Especializado </strong> que entende de verdade de tecnologia.
+            </p>
+        </section>
+    </main>
+    <footer>
+        <p>© 2025 Projeto Java|zon <a class="contato" href="contato.html">Contato</a></p></p>
+        <p>Faculdade Maurício de Nassau | Campina Grande - PB</p>
+    </footer>
+</body>
+</html>
