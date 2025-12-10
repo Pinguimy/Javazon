@@ -6,68 +6,6 @@
     <title>Javazon | Loja</title>
     <link rel="stylesheet" href="pagina.css">
     <link rel="icon" type="logo" href="loogo.png"/>
-    <style>
-        @media (max-width: 480px) {
-            header {
-                flex-direction: column;
-                padding: 8px;
-            }
-            .logo {
-                width: 100px;
-                height: 40px;
-            }
-            .barra-pesquisa {
-                flex-direction: column;
-                height: auto;
-                gap: 4px;
-                order: 3;
-                flex: 1 1 100%;
-            }
-            .categoria-dropdown select {
-                width: 100%;
-                font-size: 11px;
-                border-radius: 4px;
-            }
-            #input-pesquisa {
-                width: 100%;
-                border-radius: 4px;
-                font-size: 14px;
-            }
-            #btn-pesquisa {
-                width: 100%;
-                border-radius: 4px;
-            }
-            nav {
-                display: none;
-            }
-            .acoes-topo {
-                gap: 6px;
-            }
-            .card-list {
-                grid-template-columns: 1fr;
-                gap: 10px;
-            }
-            .class-card {
-                height: 220px;
-            }
-            .card-title {
-                font-size: 0.9rem;
-            }
-            .card-subtitle {
-                font-size: 0.75rem;
-            }
-            .conteudo-header h1 {
-                font-size: 1.2rem;
-                padding: 10px;
-            }
-            .tela {
-                height: 180px;
-            }
-            .conteudo {
-                padding: 10px;
-            }
-        }
-    </style>
 </head>
 <body>
     <header> 
@@ -76,7 +14,7 @@
         </a>
         <div class="barra-pesquisa">
             <div class="categoria-dropdown">
-                <select id="category-select">
+                <select>
                     <option value="">Todos</option>
                     <option value="">Placa Mãe</option>
                     <option value="">Processador</option>
@@ -117,12 +55,11 @@
             <div class="conteudo-header">
                 <h1> Seu Hardware e Tecnologia com as Melhores Ofertas!</h1>
                 <main id="main-content" class="main-content">
-            <div class="card-list">
+            <div id="card-list">
                 <div class="class-card">
                     <div class="card-header">
                         <div class="card-header-top">
                             <a class="fone" href="produto.html"> <h2 class="card-title">Placa-Mãe MSI A520M</h2>
-                            <svg class="icon-btn" style="color: currentColor;" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="1"/><circle cx="12" cy="5" r="1"/><circle cx="12" cy="19" r="1"/></svg>
                         </div>
                         <p class="card-subtitle">A PRO, AMD AM4, mATX, DDR4, Preto - A520M-A PRO</p>
                         <img src="Placa.png" alt=""> </a>
@@ -132,7 +69,6 @@
                     <div class="card-header">
                         <div class="card-header-top">
                             <a class="fone" href="produto.html"> <h2 class="card-title">Teclado Mecânico Gamer Redragon </h2>
-                            <svg class="icon-btn" style="color: currentColor;" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="1"/><circle cx="12" cy="5" r="1"/><circle cx="12" cy="19" r="1"/></svg>
                         </div>
                         <p class="card-subtitle">RGB, Switch Redragon Brown, ABNT2, Preto - Low Profile - K607 RGB (PT-BROWN)</p>
                         <img src="teclado.png" alt=""> </a>
@@ -141,7 +77,6 @@
                     <div class="card-header">
                         <div class="card-header-top">
                             <a class="fone" href="produto.html"> <h2 class="card-title">Teclado Mecânico Gamer Redragon Kumara</h2>
-                            <svg class="icon-btn" style="color: currentColor;" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="1"/><circle cx="12" cy="5" r="1"/><circle cx="12" cy="19" r="1"/></svg>
                         </div>
                         <p class="card-subtitle">Anti-Ghosting, RGB, Switch Outemu Brown, ABNT2, Branco - K552W-RGB (PT-BROWN)</p>
                         <img src="Kumara.png" alt=""> </a>
@@ -150,7 +85,6 @@
                     <div class="card-header">
                         <div class="card-header-top">
                             <a class="fone" href="produto.html"> <h2 class="card-title">RTX 2080 Sg Edition 8GB</h2>
-                            <svg class="icon-btn" style="color: currentColor;" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="1"/><circle cx="12" cy="5" r="1"/><circle cx="12" cy="19" r="1"/></svg>
                         </div>
                         <p class="card-subtitle">Marca: Galax</p>
                         <img src="rtx.png" alt=""> </a>
@@ -160,7 +94,6 @@
                     <div class="card-header">
                         <div class="card-header-top">
                             <a class="fone" href="produto.html"> <h2 class="card-title">Havit Fone de Ouvido </h2>
-                            <svg class="icon-btn" style="color: currentColor;" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="1"/><circle cx="12" cy="5" r="1"/><circle cx="12" cy="19" r="1"/></svg>
                         </div>
                         <p class="card-subtitle">Headset Gamer Fuxi-H3 Black</p>
                         <img src="havit.png" alt=""> </a>
@@ -170,7 +103,6 @@
                     <div class="card-header">
                         <div class="card-header-top">
                             <a class="fone" href="produto.html"> <h2 class="card-title">Notebook ASUS Vivobook 15</h2>
-                            <svg class="icon-btn" style="color: currentColor;" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="1"/><circle cx="12" cy="5" r="1"/><circle cx="12" cy="19" r="1"/></svg>
                         </div>
                         <p class="card-subtitle">AMD Ryzen 7 5825U, 16GB RAM, 512 GB SSD, KeepOS, Tela 15.6, FHD, Cool Silver - M1502YA-NJ612</p>
                         <img src="asus.png" alt=""> </a>
@@ -179,7 +111,6 @@
                     <div class="card-header">
                         <div class="card-header-top">
                             <a class="fone" href="produto.html"> <h2 class="card-title">Aspirador</h2>
-                            <svg class="icon-btn" style="color: currentColor;" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="1"/><circle cx="12" cy="5" r="1"/><circle cx="12" cy="19" r="1"/></svg>
                         </div>
                         <p class="card-subtitle">5 Modos de Limpeza, Mapeamento a Laser 3D, Base de Carregamento - Bivolt - Branco - KBSF006</p>
                         <img src="Aspirador.png" alt=""> </a>
@@ -189,7 +120,6 @@
                     <div class="card-header">
                         <div class="card-header-top">
                             <a class="fone" href="produto.html"> <h2 class="card-title">Monitor Gamer GIGABYTE 27 FHD</h2>
-                            <svg class="icon-btn" style="color: currentColor;" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="1"/><circle cx="12" cy="5" r="1"/><circle cx="12" cy="19" r="1"/></svg>
                         </div>
                         <p class="card-subtitle"> 180Hz, 1ms, IPS, HDMI e DisplayPort, 110% sRGB, FreeSync - GS27FA SA</p>
                         <img src="monitor.png" alt=""> </a>
@@ -205,5 +135,4 @@
     </footer>
     <script src="script.js"></script>
 </body>
-
 </html>

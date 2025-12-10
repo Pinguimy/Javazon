@@ -50,6 +50,8 @@ if (contactForm) {
     });
 }
 
+
+
 // --- Busca de produtos no índice ---
 const searchInput = document.getElementById('input-pesquisa');
 if (searchInput) {
@@ -89,7 +91,7 @@ if (searchInput) {
         }
     }
 
-    // debounce simples
+    // debounce simples (Imagine um elevador)
     let debounceTimer;
     searchInput.addEventListener('input', (e) => {
         clearTimeout(debounceTimer);
@@ -101,6 +103,8 @@ if (searchInput) {
     if (btnSearch) btnSearch.addEventListener('click', () => filterCards(searchInput.value));
 }
 
+
+
 // BOTÃO VOLTAR AO TOPO
 const btnTopo = document.querySelector("#topo");
 
@@ -110,4 +114,49 @@ window.addEventListener("scroll", () => {
 
 btnTopo.addEventListener("click", () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
+});
+
+
+
+// --- Adiciona emblemas de preço automaticamente nos cards ---
+document.addEventListener('DOMContentLoaded', () => {
+    const priceMap = [
+        { match: /teclado/i, price: 169.90 },
+        { match: /placa[- ]?m[eã]e|placa/i, price: 399.90 },
+        { match: /rtx|vga|placa/i, price: 1999.90 },
+        { match: /havit|fone|headset/i, price: 79.90 },
+        { match: /notebook|laptop/i, price: 2499.90 },
+        { match: /aspirador/i, price: 349.90 },
+        { match: /monitor/i, price: 899.90 }
+    ];
+
+// bota R$ na frente e formata decimal com vírgula
+    function formatBR(value) {
+        return 'R$ ' + value.toFixed(2).replace('.', ',');
+    }
+
+    const cards = document.querySelectorAll('.class-card');
+    cards.forEach(card => {
+        // evita duplicar emblema/badge
+        if (card.querySelector('.price-badge') || card.querySelector('.price-inline')) return;
+
+        const title = (card.querySelector('.card-title')?.textContent || 'produto').trim();
+        let found = priceMap.find(p => p.match.test(title));
+        let price = found ? found.price : (Math.floor(Math.random() * 900) + 49) + 0.90; // default
+
+        const headerTop = card.querySelector('.card-header-top');
+        if (headerTop) {
+            // cria um emblema inline ao lado do título (mais discreto)
+            const span = document.createElement('span');
+            span.className = 'price-inline';
+            span.textContent = formatBR(price);
+            headerTop.appendChild(span);
+        } else {
+            // fallback: emblema absoluto no canto
+            const badge = document.createElement('div');
+            badge.className = 'price-badge';
+            badge.textContent = formatBR(price);
+            card.appendChild(badge);
+        }
+    });
 });

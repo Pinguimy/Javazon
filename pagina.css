@@ -96,12 +96,8 @@ header {
   align-items: center;
   justify-content: center;
 }
-#btn-pesquisa:hover {
-  background-color: #ff741f;
-}
-nav {
-  margin-right: 20px;
-}
+#btn-pesquisa:hover { background-color: #ff741f;}
+nav { margin-right: 20px; }
 nav ul {
   margin: 0;
   padding: 0;
@@ -109,9 +105,7 @@ nav ul {
   display: flex;
   align-items: center;
 }
-nav li {
-  margin-left: 30px;
-}
+nav li { margin-left: 30px; }
 nav li a {
   color: white;
   text-decoration: none;
@@ -119,9 +113,7 @@ nav li a {
   padding: 10px 5px;
   transition: color 0.2s;
 }
-nav li a:hover {
-  color: #ff741f;
-}
+nav li a:hover { color: #ff741f; }
 .acoes-topo {
   display: flex;
   align-items: center;
@@ -142,9 +134,7 @@ nav li a:hover {
   position: relative; /* Necessário para o badge */
 }
 
-.icone-acao:hover {
-  background-color: rgba(255, 255, 255, 0.1);
-}
+.icone-acao:hover { background-color: rgba(255, 255, 255, 0.1); }
 
 .botao-principal a {
   color: white;
@@ -190,24 +180,25 @@ footer {
   margin-top: 3rem;
 }
 
-.card-list {
+#card-list {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 24px;
-  max-width: 1300px;
-  margin-top: 24px;
+  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+  gap: 20px;
 }
 
 .class-card {
   width: 100%;
-  height: 350px;
+  height: auto;
+  min-height: 220px;
   border-radius: 0.75rem;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;
   overflow: hidden;
-  background-color: white;
+  background-color: rgb(255, 255, 255);
   transition: transform 0.2s;
+
+  position: relative; /* necessário para posicionar badge de preço */
 }
 
 .class-card:hover {
@@ -217,7 +208,7 @@ footer {
 }
 
 .card-header {
-  height: 100px;
+  height: auto;
   padding: 16px;
   display: flex;
   flex-direction: column;
@@ -245,9 +236,32 @@ footer {
   font-weight: 500;
 }
 
-.tela {
-  box-shadow: 0 2px 4px rgba(0, 0, 2, 1.05); /* Sombra para profundidade header */
+/* Ajuste das imagens dos cards para não ficarem cortadas */
+.class-card img {
+  width: calc(100% - 32px);
+  max-width: 420px;
+  max-height: 160px;
+  object-fit: contain;
+  display: block;
+  margin: 12px auto 0;
 }
+
+/* selo de preço no canto superior direito do card */
+.price-badge {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: linear-gradient(180deg,#ff8a3d,#ff741f);
+  color: white;
+  padding: 6px 10px;
+  border-radius: 8px;
+  font-weight: 700;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.12);
+  font-size: 0.95rem;
+  z-index: 1600;
+}
+
+.tela { box-shadow: 0 2px 4px rgba(0, 0, 2, 1.05); /* Sombra para profundidade header */ }
 
 .contato  {
   text-decoration: none;
@@ -385,9 +399,7 @@ footer {
   margin-bottom: 20px;
 }
 
-.form-group {
-  margin-bottom: 15px;
-}
+.form-group { margin-bottom: 15px;}
 
 .form-group label {
   display: block;
@@ -408,9 +420,7 @@ footer {
   
 }
 
-.form-group textarea {
-  resize: vertical; /* Permite redimensionar apenas na vertical */
-}
+.form-group textarea { resize: vertical; /* Permite redimensionar apenas na vertical */}
 
 .btn-enviar {
   background-color: #ff741f;
@@ -426,9 +436,7 @@ footer {
   margin-top: 10px;
 }
 
-.btn-enviar:hover {
-  background-color: #e06015;
-}
+.btn-enviar:hover {background-color: #e06015;}
 
 .info-contato ul {
   list-style: none;
@@ -436,9 +444,7 @@ footer {
   margin-top: 15px;
 }
 
-.info-contato li {
-  margin-bottom: 10px;
-  line-height: 1.4;
+.info-contato li { margin-bottom: 10px; line-height: 1.4;
 }
 
 .info-contato a {
@@ -446,9 +452,7 @@ footer {
   text-decoration: none;
 }
 
-.info-contato a:hover {
-  text-decoration: underline;
-}
+.info-contato a:hover {text-decoration: underline;}
 
 .localizacao h3 {
   margin-top: 25px;
@@ -457,9 +461,7 @@ footer {
 
 /* Responsividade Básica */
 @media (max-width: 768px) {
-  .contato-container {
-    flex-direction: column;
-  }
+  .contato-container {flex-direction: column;}
 
   .formulario-contato {
     border-right: none;
@@ -469,9 +471,7 @@ footer {
     margin-bottom: 20px;
   }
 
-  .info-contato {
-    padding-left: 0;
-  }
+  .info-contato {padding-left: 0;}
 }
 
 .fone {
@@ -497,4 +497,56 @@ footer {
 
 #topo:hover {
     transform: scale(1.1);
+}
+
+/* Overrides para alinhar header-top e estilo do preço (append) */
+.card-header-top { align-items: center !important; }
+
+/* variação inline do preço (aparece ao lado do título, mais discreto) */
+.price-inline {
+  display: inline-block;
+  background: #fff;
+  color: #ff741f;
+  padding: 6px 10px;
+  border-radius: 20px;
+  font-weight: 800;
+  border: 2px solid #ffefea;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.06);
+  font-size: 0.95rem;
+  margin-left: 12px;
+}
+.card-header-top .price-inline { margin-top: 0; align-self: center; }
+
+
+/* Badge*/
+.price-badge { 
+  padding: 4px 8px;
+  font-size: 0.9rem;
+  border-radius: 6px; 
+}
+
+.card-header-top { 
+  align-items: center !important;
+}
+.price-inline {
+  display: inline-block;
+  background: #fff;
+  color: #ff741f;
+  padding: 6px 10px;
+  border-radius: 20px;
+  font-weight: 800;
+  border: 2px solid #ffefea;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.06);
+  font-size: 0.95rem;
+  margin-left: 12px;
+}
+.card-header-top .price-inline { 
+  margin-top: 0; 
+  align-self: center; 
+}
+
+.price-badge { 
+  padding: 4px 8px; 
+  font-size: 0.9rem; 
+  border-radius: 6px; 
 }
