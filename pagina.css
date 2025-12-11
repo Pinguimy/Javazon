@@ -1,4 +1,3 @@
-/* Definição de estilos base (CSS Reset/Normalize implícito) */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
@@ -119,7 +118,6 @@ nav li a:hover { color: #ff741f; }
   align-items: center;
   gap: 15px;
 }
-
 .icone-acao {
   text-decoration: none;
   font-size: 20px;
@@ -133,9 +131,7 @@ nav li a:hover { color: #ff741f; }
   cursor: pointer;
   position: relative; /* Necessário para o badge */
 }
-
 .icone-acao:hover { background-color: rgba(255, 255, 255, 0.1); }
-
 .botao-principal a {
   color: white;
   text-decoration: none;
@@ -151,7 +147,6 @@ nav li a:hover { color: #ff741f; }
   background-color: rgba(255, 255, 255, 0.1);
   border-color: #ff9900;
 }
-
 .conteudo {
   padding: 20px 0;
   background-color: #ffffff;
@@ -160,18 +155,15 @@ nav li a:hover { color: #ff741f; }
   margin: 0 auto;
   border-radius: 20px;
 }
-
 .conteudo-header {
   text-align: center;
   padding: 30px 20px;
 }
-
 .conteudo-header h1 {
   color: #333;
   margin-bottom: 10px;
   font-size: 2.5rem;
 }
-
 footer {
   text-align: center;
   padding: 2rem 1rem;
@@ -179,13 +171,11 @@ footer {
   color: #ecf0f1;
   margin-top: 3rem;
 }
-
 #card-list {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
   gap: 20px;
 }
-
 .class-card {
   width: 100%;
   height: auto;
@@ -197,16 +187,13 @@ footer {
   overflow: hidden;
   background-color: rgb(255, 255, 255);
   transition: transform 0.2s;
-
   position: relative; /* necessário para posicionar badge de preço */
 }
-
 .class-card:hover {
   background-color: #fcd7d7;
   transform: translateY(-2px);
   box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
 }
-
 .card-header {
   height: auto;
   padding: 16px;
@@ -214,13 +201,11 @@ footer {
   flex-direction: column;
   justify-content: space-between;
 }
-
 .card-header-top {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
 }
-
 .card-title {
   font-size: 1.25rem;
   font-weight: 600;
@@ -229,13 +214,11 @@ footer {
   white-space: pre-wrap;
   max-width: 90%;
 }
-
 .card-subtitle {
   font-size: 0.875rem;
   opacity: 0.8;
   font-weight: 500;
 }
-
 /* Ajuste das imagens dos cards para não ficarem cortadas */
 .class-card img {
   width: calc(100% - 32px);
@@ -245,7 +228,6 @@ footer {
   display: block;
   margin: 12px auto 0;
 }
-
 /* selo de preço no canto superior direito do card */
 .price-badge {
   position: absolute;
@@ -260,16 +242,12 @@ footer {
   font-size: 0.95rem;
   z-index: 1600;
 }
-
 .tela { box-shadow: 0 2px 4px rgba(0, 0, 2, 1.05); /* Sombra para profundidade header */ }
-
 .contato  {
   text-decoration: none;
   color: #aa4100;
 }
-
 /* Estilos Específicos para a Página Sobre Nós */
-
 .sobre-pagina {
   max-width: 1000px;
   margin: 40px auto;
@@ -278,51 +256,43 @@ footer {
   border-radius: 8px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
 }
-
 .sobre-pagina h1 {
   text-align: center;
   color: #131921;
   margin-bottom: 5px;
 }
-
 .sobre-pagina .subtitulo {
   text-align: center;
   color: #555;
   margin-bottom: 40px;
   font-size: 1.15rem;
 }
-
 .sobre-pagina section {
   margin-bottom: 40px;
   padding: 20px 0;
   border-bottom: 1px dashed #ccc;
 }
-
 .sobre-pagina section:last-child {
   border-bottom: none;
   margin-bottom: 0;
 }
-
 .sobre-pagina h2 {
   color: #ff741f;
   border-left: 5px solid #ff741f;
   padding-left: 10px;
   margin-bottom: 15px;
 }
-
 .historia p,
 .diferenciais p {
   line-height: 1.6;
   color: #333;
 }
-
 /* Estilizando Missão, Visão e Valores (MVV) */
 .mvv-container {
   display: flex;
   gap: 30px;
   margin-top: 20px;
 }
-
 .mvv-item {
   flex: 1;
   padding: 20px;
@@ -330,7 +300,6 @@ footer {
   border-radius: 6px;
   background-color: #f9f9f9;
 }
-
 .mvv-item h3 {
   color: #131921;
   font-size: 1.3rem;
@@ -339,7 +308,6 @@ footer {
   padding-bottom: 10px;
   margin-bottom: 15px;
 }
-
 .mvv-item ul {
   list-style: none;
   padding: 0;
@@ -350,26 +318,22 @@ footer {
 }
 
 /* Estilos Específicos para a Página de Contato */
-
 .contato-pagina {
   max-width: 1200px;
   margin: 40px auto;
   padding: 0 20px;
 }
-
 .contato-pagina h1 {
   text-align: center;
   color: #131921;
   margin-bottom: 5px;
 }
-
 .contato-pagina .subtitulo {
   text-align: center;
   color: #555;
   margin-bottom: 30px;
   font-size: 1.1rem;
 }
-
 .contato-container {
   display: flex;
   gap: 40px;
@@ -378,18 +342,15 @@ footer {
   border-radius: 8px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
 }
-
 .formulario-contato {
   flex: 2; /* O formulário ocupa mais espaço */
   padding-right: 20px;
   border-right: 1px solid #eee;
 }
-
 .info-contato {
   flex: 1; /* As informações ocupam menos espaço */
   padding-left: 20px;
 }
-
 .formulario-contato h2,
 .info-contato h2 {
   color: #ff741f; /* Use uma cor de destaque, como no seu CSS de login */
@@ -421,7 +382,6 @@ footer {
 }
 
 .form-group textarea { resize: vertical; /* Permite redimensionar apenas na vertical */}
-
 .btn-enviar {
   background-color: #ff741f;
   color: white;
@@ -437,7 +397,6 @@ footer {
 }
 
 .btn-enviar:hover {background-color: #e06015;}
-
 .info-contato ul {
   list-style: none;
   padding: 0;
@@ -446,40 +405,22 @@ footer {
 
 .info-contato li { margin-bottom: 10px; line-height: 1.4;
 }
-
 .info-contato a {
   color: #007bff; /* Cor padrão para links */
   text-decoration: none;
 }
 
 .info-contato a:hover {text-decoration: underline;}
-
 .localizacao h3 {
   margin-top: 25px;
   color: #131921;
 }
-
-/* Responsividade Básica */
-@media (max-width: 768px) {
-  .contato-container {flex-direction: column;}
-
-  .formulario-contato {
-    border-right: none;
-    border-bottom: 1px solid #eee;
-    padding-right: 0;
-    padding-bottom: 20px;
-    margin-bottom: 20px;
-  }
-
-  .info-contato {padding-left: 0;}
-}
-
+.info-contato {padding-left: 0;}
 .fone {
   display: contents;
   color: black;
-  
-}
 
+}
 /* Botão voltar ao topo */
 #topo {
     position: fixed;
@@ -494,11 +435,9 @@ footer {
     display: none;
     transition: 0.3s;
 }
-
 #topo:hover {
     transform: scale(1.1);
 }
-
 /* Overrides para alinhar header-top e estilo do preço (append) */
 .card-header-top { align-items: center !important; }
 
@@ -517,17 +456,13 @@ footer {
 }
 .card-header-top .price-inline { margin-top: 0; align-self: center; }
 
-
 /* Badge*/
 .price-badge { 
   padding: 4px 8px;
   font-size: 0.9rem;
   border-radius: 6px; 
 }
-
-.card-header-top { 
-  align-items: center !important;
-}
+.card-header-top { align-items: center !important; }
 .price-inline {
   display: inline-block;
   background: #fff;
@@ -544,7 +479,6 @@ footer {
   margin-top: 0; 
   align-self: center; 
 }
-
 .price-badge { 
   padding: 4px 8px; 
   font-size: 0.9rem; 

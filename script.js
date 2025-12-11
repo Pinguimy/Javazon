@@ -142,7 +142,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const title = (card.querySelector('.card-title')?.textContent || 'produto').trim();
         let found = priceMap.find(p => p.match.test(title));
-        let price = found ? found.price : (Math.floor(Math.random() * 900) + 49) + 0.90; // default
+        let price = found ? found.price : (Math.floor(Math.random() * 900) + 49) + 0.90; // preço aleatório entre R$49,90 e R$949,90
 
         const headerTop = card.querySelector('.card-header-top');
         if (headerTop) {
